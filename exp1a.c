@@ -80,7 +80,12 @@ void sqrt_of_log(int n) {
     double result = sqrt(log2n);
     printf("Square root of log base 2 of %d is %lf\n", n, result);
 }
-
+void factorial(int a) {
+    int result = 1;
+    for (int i = 1; i <= a; i++)
+        result = result * i;
+    printf("Factorial of %d is %d \n", a, result);
+}
 // Function to calculate 2^(2^(lg n)) manually
 void two_power_two_power_log(int n) {
     double log2n = log(n) / log(2);
@@ -116,7 +121,14 @@ void two_power_n_plus_1(int n) {
     }
     printf("2^(n+1) for %d is %lld\n", n, result);
 }
-
+void exponential(int n) {
+    double a = 2.718;
+    double result = 1;
+    for (int i = 1; i <= n; i++) {
+        result = result * a;
+    }
+    printf("e exponent %d is %lf \n", n, result);
+}
 int main() {
     int n;
     printf("Enter a number: ");
@@ -136,6 +148,7 @@ int main() {
     log_of_log(n);
     square(n);
     two_power_n_plus_1(n);
-
+    factorial(n);
+    exponential(n);
     return 0;
 }
