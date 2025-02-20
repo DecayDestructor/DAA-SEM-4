@@ -129,26 +129,30 @@ void exponential(int n) {
     }
     printf("e exponent %d is %lf \n", n, result);
 }
+void linear(int n) {
+    printf("Linear is %d \n", n);
+}
 int main() {
-    int n;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-
-    logbasetwo(n);
-    cube(n);
-    log_squared(n);
-    log_factorial(n);
-    power_of_two(n);
-    natural_log_of_log(n);
-    two_power_log(n);
-    log_power_log(n);
-    n_times_two_power_n(n);
-    sqrt_of_log(n);
-    two_power_two_power_log(n);
-    log_of_log(n);
-    square(n);
-    two_power_n_plus_1(n);
-    factorial(n);
-    exponential(n);
+    for (int n = 1; n <= 100; n++) {
+        linear(n);
+        logbasetwo(n);
+        cube(n);
+        log_squared(n);
+        power_of_two(n);
+        natural_log_of_log(n);
+        sqrt_of_log(n);
+        log_of_log(n);
+        square(n);
+    }
+    for (int n = 1; n <= 15; n++) {
+        log_factorial(n);
+        two_power_log(n);
+        log_power_log(n);
+        n_times_two_power_n(n);
+        two_power_two_power_log(n);
+        two_power_n_plus_1(n);
+        factorial(n);
+        exponential(n);
+    }
     return 0;
 }
